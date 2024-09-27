@@ -1,15 +1,33 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.printf("Hello and welcome!\n");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // Creazione di un oggetto della classe Auto
+        Auto miaAuto = new Auto("Toyota", "Corolla", 2020);
+        Libro mioLibro = new Libro("Uno Nessuno centomila", "Pirandello", 1926);
+        Rivista miaRivista = new Rivista("Di più tv", "Paolo Fox", "16/07/1988");
+        Giornale mioGiornale = new Giornale("Il Mattino", "Gianpiero Galeazzi", "25/08/2024");
+
+        // Chiamata ai metodi per mostrare le informazioni
+        miaAuto.mostraInfo();
+        mioLibro.mostraInfo();
+        miaRivista.mostraInfo();
+        mioGiornale.mostraInfo();
+
+        // Modifica il titolo del libro e dell'autore della rivista
+        mioLibro.setTitolo("Uno Nessuno Centomila - Edizione Speciale");
+        miaRivista.setAutore("Nuovo Autore");
+        mioGiornale.setAutore("Alfonso Signorini");
+        // Visualizza le informazioni aggiornate
+        System.out.println("\nDopo la modifica:");
+        mioLibro.mostraInfo();
+        miaRivista.mostraInfo();
+        mioGiornale.mostraInfo();
+
+        // Utilizza il getter per ottenere il titolo
+        String titolo = mioLibro.getTitolo();
+        System.out.println("Il titolo del libro è: " + titolo);
+        String autore = mioLibro.getAutore();
+        System.out.println("Il nuovo autore: " + autore);
     }
 }
