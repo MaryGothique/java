@@ -9,6 +9,9 @@ public class Main {
         Giornale mioGiornale = new Giornale("Il Mattino", "Gianpiero Galeazzi", "25/08/2024");
         Manager mioManager = new Manager("Alice", 5);
         Impiegato mioImpiegato = new Impiegato("Bob", "Progetto A");
+        Animale mioCane = new Cane("Fido");
+        Animale mioGatto = new Gatto("Whiskers");
+
 
 
 
@@ -19,6 +22,10 @@ public class Main {
         mioGiornale.mostraInfo();
         mioManager.mostraInfo();
         mioImpiegato.mostraInfo();
+        mioCane.faiVerso();
+        mioGatto.faiVerso();
+
+
 
         // Modifica il titolo del libro e dell'autore della rivista
         mioLibro.setTitolo("Uno Nessuno Centomila - Edizione Speciale");
@@ -29,6 +36,7 @@ public class Main {
         mioLibro.mostraInfo();
         miaRivista.mostraInfo();
         mioGiornale.mostraInfo();
+
 
         // Utilizza il getter per ottenere il titolo
         String titolo = mioLibro.getTitolo();

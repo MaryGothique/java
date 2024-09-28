@@ -13,3 +13,4 @@ public class Manager extends Dipendente {
         System.out.println("Numero di sottoposti: " + numeroDiSottoposti);
     }
 }
+
