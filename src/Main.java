@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.printf("Hello and welcome!\n");
 
+
         // Creazione di un oggetto della classe Auto
         Auto miaAuto = new Auto("Toyota", "Corolla", 2020);
         Libro mioLibro = new Libro("Uno Nessuno centomila", "Pirandello", 1926);
