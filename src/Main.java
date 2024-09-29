@@ -2,8 +2,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.printf("Hello and welcome!\n");
 
-
-        // Creazione di un oggetto della classe Auto
+        // Creating objects of various classes
         Auto miaAuto = new Auto("Toyota", "Corolla", 2020);
         Libro mioLibro = new Libro("Uno Nessuno centomila", "Pirandello", 1926);
         Rivista miaRivista = new Rivista("Di più tv", "Paolo Fox", "16/07/1988");
@@ -13,10 +12,7 @@ public class Main {
         Animale mioCane = new Cane("Fido");
         Animale mioGatto = new Gatto("Whiskers");
 
-
-
-
-        // Chiamata ai metodi per mostrare le informazioni
+        // Calling the methods to show the information
         miaAuto.mostraInfo();
         mioLibro.mostraInfo();
         miaRivista.mostraInfo();
@@ -26,23 +22,30 @@ public class Main {
         mioCane.faiVerso();
         mioGatto.faiVerso();
 
-
-
-        // Modifica il titolo del libro e dell'autore della rivista
+        // Modifying the title of the book and the author of the magazine
         mioLibro.setTitolo("Uno Nessuno Centomila - Edizione Speciale");
         miaRivista.setAutore("Nuovo Autore");
         mioGiornale.setAutore("Alfonso Signorini");
-        // Visualizza le informazioni aggiornate
-        System.out.println("\nDopo la modifica:");
+
+        // Display the updated information
+        System.out.println("\nAfter the modification:");
         mioLibro.mostraInfo();
         miaRivista.mostraInfo();
         mioGiornale.mostraInfo();
 
-
-        // Utilizza il getter per ottenere il titolo
+        // Using the getter to obtain the title
         String titolo = mioLibro.getTitolo();
-        System.out.println("Il titolo del libro è: " + titolo);
+        System.out.println("The title of the book is: " + titolo);
+
+        // Using the getter to obtain the author
         String autore = mioLibro.getAutore();
-        System.out.println("Il nuovo autore: " + autore);
+        System.out.println("The new author is: " + autore);
+
+        // Demonstrating polymorphism by using a superclass reference
+        Animale[] animali = {mioCane, mioGatto};
+        System.out.println("\nAnimal sounds:");
+        for (Animale animale : animali) {
+            animale.faiVerso(); // Calls the overridden method in each subclass
+        }
     }
 }

@@ -1,48 +1,60 @@
-import java.util.Scanner; // Importa la classe Scanner per leggere input da console
-                            // import of the class Scanner for reading input from the console
-                            // import de la class Scanner pour lire l input dans la console
+import java.util.Scanner; // Import the Scanner class for reading input from the console
+// import de la classe Scanner pour lire l'input dans la console
 
 public class Calcolatrice {
     public static void main(String[] args) {
-        // Crea un oggetto Scanner per leggere l'input
-        // Create an object Scanner for reading l' input
-        // Créer un object Scanner por lire l input
+        // Create a Scanner object for reading input
+        // Créer un object Scanner pour lire l'input
         Scanner scanner = new Scanner(System.in);
 
-        // Chiedi all'utente di inserire il primo numero
-        // Ask to the yser to insert the first number
-        // demander à l' utilisateur de inserer le prémier numero
+        // Ask the user to enter the first number
+        // Demander à l'utilisateur de saisir le premier numéro
         System.out.print("Inserisci il primo numero: ");
-        double primoNumero = scanner.nextDouble(); // Leggi il primo numero // read the first number // lire le premier numero
-        System.out.println("Hai inserito il: " + primoNumero); // Stampa il primo numero // print the firs number // lire le premier numero
+        double primoNumero = scanner.nextDouble(); // Read the first number
+        // Lire le premier numéro
+        System.out.println("Hai inserito il: " + primoNumero); // Print the first number
+        // Imprimer le premier numéro
 
-        // Chiedi all'utente di inserire il secondo numero
-        // Ask at the user to insert the second number
-        // demander à l utilisateur de inserer le douxieme numero
+        // Ask the user to enter the second number
+        // Demander à l'utilisateur de saisir le deuxième numéro
         System.out.print("Inserisci il secondo numero: ");
-        double secondoNumero = scanner.nextDouble(); // Leggi il secondo numero //read the second number // lire le douxiéme numero
-        System.out.println("Hai inserito il: " + secondoNumero); // Stampa il secondo numero // print the second number // lire le douxieme numero
+        double secondoNumero = scanner.nextDouble(); // Read the second number
+        // Lire le deuxième numéro
+        System.out.println("Hai inserito il: " + secondoNumero); // Print the second number
+        // Imprimer le deuxième numéro
 
-        // Calcola somma, differenza, prodotto e quoziente
-
+        // Calculate sum, difference, product, and quotient
         double somma = primoNumero + secondoNumero;
         double differenza = primoNumero - secondoNumero;
         double prodotto = primoNumero * secondoNumero;
         double quoziente = primoNumero / secondoNumero;
 
-        // Stampa i risultati
+        // Print the results
         System.out.println("Somma: " + somma);
         System.out.println("Differenza: " + differenza);
         System.out.println("Prodotto: " + prodotto);
         System.out.println("Quoziente: " + quoziente);
 
-
-        // Calcolare la media
-        double media = primoNumero + secondoNumero /2 ;
-        // Stampa la media
+        // Calculate the average
+        double media = (primoNumero + secondoNumero) / 2; // Corrected to ensure the average calculation is correct
+        // Print the average
         System.out.println("Media: " + media);
 
-        // Chiudi lo scanner
+        // Close the scanner
         scanner.close();
     }
 }
+
+/**
+ * Calcolatrice Class
+ *
+ * This class represents a simple calculator that reads two numbers from the user,
+ * performs basic arithmetic operations (sum, difference, product, quotient),
+ * and calculates the average.
+ *
+ * Main Features:
+ *
+ *     - Reads two numbers from the user.
+ *     - Calculates and displays the sum, difference, product, quotient, and average.
+ *
+ */

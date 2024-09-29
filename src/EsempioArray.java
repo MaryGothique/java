@@ -3,99 +3,112 @@ import java.util.Scanner;
 
 public class EsempioArray {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // Create a Scanner object for reading input
 
-        // Dichiarazione e inizializzazione di un array di interi
+        // Declaration and initialization of an array of integers
         int[] numeri = {10, 20, 30, 40, 50};
 
-        // Accesso agli elementi dell'array
-        System.out.println("Primo numero: " + numeri[0]); // Output: 10
-        System.out.println("Secondo numero: " + numeri[1]); // Output: 20
+        // Accessing array elements
+        System.out.println("First number: " + numeri[0]); // Output: 10
+        System.out.println("Second number: " + numeri[1]); // Output: 20
 
-        // Modifica di un elemento
-        numeri[2] = 35; // Cambia il terzo elemento in 35
-        System.out.println("Terzo numero modificato: " + numeri[2]); // Output: 35
+        // Modifying an element
+        numeri[2] = 35; // Change the third element to 35
+        System.out.println("Modified third number: " + numeri[2]); // Output: 35
 
-        // Lunghezza dell'array
-        System.out.println("Lunghezza dell'array: " + numeri.length); // Output: 5
+        // Length of the array
+        System.out.println("Length of the array: " + numeri.length); // Output: 5
 
-        // Esempio con un array di double
+        // Example with an array of doubles
         double[] number = {33.55, 26.07, 55.96, 80.88};
-        System.out.println("Esempio con i numeri double:");
-        System.out.println("Primo numero: " + number[0]);
-        System.out.println("Secondo numero: " + number[1]);
-        System.out.println("Lunghezza dell'array di double: " + number.length);
+        System.out.println("Example with double numbers:");
+        System.out.println("First number: " + number[0]);
+        System.out.println("Second number: " + number[1]);
+        System.out.println("Length of the double array: " + number.length);
 
-        // Creazione di un ArrayList di stringhe
+        // Creation of an ArrayList of strings
         ArrayList<String> nomi = new ArrayList<>();
 
-        // Aggiunta di elementi all'ArrayList
+        // Adding elements to the ArrayList
         nomi.add("Mario");
         nomi.add("Luigi");
         nomi.add("Peach");
 
-        // Accesso e stampa degli elementi dell'ArrayList
-        System.out.println("\nElementi dell'ArrayList:");
+        // Accessing and printing the elements of the ArrayList
+        System.out.println("\nElements of the ArrayList:");
         for (String nome : nomi) {
             System.out.println(nome);
         }
 
-        // Modifica di un elemento nell'ArrayList
+        // Modifying an element in the ArrayList
         nomi.set(1, "Wario");
-        System.out.println("\nArrayList dopo modifica:");
+        System.out.println("\nArrayList after modification:");
         for (String nome : nomi) {
             System.out.println(nome);
         }
 
-        // Gestione della lista di amici
+        // Managing the friends list
         ArrayList<String> amici = new ArrayList<>();
-        int scelta;
+        int scelta; // User choice
 
         do {
+            // Display menu options
             System.out.println("\nMenu:");
-            System.out.println("1. Aggiungi un amico");
-            System.out.println("2. Rimuovi un amico");
-            System.out.println("3. Visualizza la lista di amici");
-            System.out.println("4. Esci");
-            System.out.print("Scegli un'opzione: ");
+            System.out.println("1. Add a friend");
+            System.out.println("2. Remove a friend");
+            System.out.println("3. View friends list");
+            System.out.println("4. Exit");
+            System.out.print("Choose an option: ");
 
-            scelta = scanner.nextInt();
-            scanner.nextLine(); // Consuma il newline rimasto nel buffer
+            scelta = scanner.nextInt(); // Read user choice
+            scanner.nextLine(); // Consume the newline left in the buffer
 
             switch (scelta) {
                 case 1:
-                    System.out.print("Inserisci il nome dell'amico da aggiungere: ");
-                    String amicoDaAggiungere = scanner.nextLine();
-                    amici.add(amicoDaAggiungere);
-                    System.out.println(amicoDaAggiungere + " è stato aggiunto alla lista.");
+                    System.out.print("Enter the name of the friend to add: ");
+                    String amicoDaAggiungere = scanner.nextLine(); // Read friend's name to add
+                    amici.add(amicoDaAggiungere); // Add friend to the list
+                    System.out.println(amicoDaAggiungere + " has been added to the list.");
                     break;
                 case 2:
-                    System.out.print("Inserisci il nome dell'amico da rimuovere: ");
-                    String amicoDaRimuovere = scanner.nextLine();
+                    System.out.print("Enter the name of the friend to remove: ");
+                    String amicoDaRimuovere = scanner.nextLine(); // Read friend's name to remove
                     if (amici.remove(amicoDaRimuovere)) {
-                        System.out.println(amicoDaRimuovere + " è stato rimosso dalla lista.");
+                        System.out.println(amicoDaRimuovere + " has been removed from the list.");
                     } else {
-                        System.out.println(amicoDaRimuovere + " non è nella lista.");
+                        System.out.println(amicoDaRimuovere + " is not in the list.");
                     }
                     break;
                 case 3:
-                    System.out.println("Lista di amici:");
+                    System.out.println("Friends list:");
                     if (amici.isEmpty()) {
-                        System.out.println("La lista è vuota.");
+                        System.out.println("The list is empty.");
                     } else {
                         for (String amico : amici) {
-                            System.out.println(amico);
+                            System.out.println(amico); // Print each friend's name
                         }
                     }
                     break;
                 case 4:
-                    System.out.println("Uscita dal programma.");
+                    System.out.println("Exiting the program.");
                     break;
                 default:
-                    System.out.println("Opzione non valida. Riprova.");
+                    System.out.println("Invalid option. Please try again.");
             }
         } while (scelta != 4);
 
-        scanner.close(); // Chiude lo scanner alla fine
+        scanner.close(); // Close the scanner at the end
     }
 }
+
+/**
+ * EsempioArray Class
+ *
+ * This class demonstrates the use of arrays and ArrayLists in Java.
+ *
+ * Main Features:
+ *
+ *     - Creation and manipulation of integer and double arrays.
+ *     - Creation and modification of an ArrayList of strings.
+ *     - A simple menu-driven interface for managing a friends list.
+ */
